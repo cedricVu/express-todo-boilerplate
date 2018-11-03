@@ -9,6 +9,8 @@ http://45.32.221.233:5555/swagger/view
  - CORS enabled
  - Uses [yarn](https://yarnpkg.com)
  - Express + MongoDB ([Mongoose](http://mongoosejs.com/))
+ - Soft delete
+ - Uses Mongoose (Class, plugin ... )
  - [Docker](https://www.docker.com/) support
  - Uses [helmet](https://github.com/helmetjs/helmet) to set some HTTP headers for security
  - Load environment variables from .env files with [dotenv](https://github.com/rolodato/dotenv-safe)
@@ -29,7 +31,7 @@ Clone the repo and make it yours:
 
 ```bash
 git clone --depth 1 https://github.com/cedricVu/NodeJs-Todo-Service.git
-cd todo-service
+cd Nodejs-todo-service
 rm -rf .git
 ```
 

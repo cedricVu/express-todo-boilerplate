@@ -53,4 +53,12 @@ export default class TodoValidator extends BaseValidator {
         }
     };
 
+    static delete() {
+        return {
+            params: {
+                ...TodoValidator.commonInput.params,
+            }
+        }
+    };
+
 }

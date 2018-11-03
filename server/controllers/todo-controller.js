@@ -30,6 +30,9 @@ export default class TodoController {
                     _id
                 }
             });
+            if (!todo) {
+                return next(new Error('Todo is not found'));
+            }
             return success(res, todo);
         } catch (e) {
             return next(e);
@@ -58,6 +61,22 @@ export default class TodoController {
                 body
             );
             return success(res, todo);
+        } catch (e) {
+            return next(e);
+        }
+    }
+
+    static async delete(req, res, next) {
+        try {
+            const _id = req.params.id;
+            await Todo.softDelete(
+                {
+                    where: {
+                        _id
+                    }
+                }
+            );
+            return success(res, true);
         } catch (e) {
             return next(e);
         }

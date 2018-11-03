@@ -11,6 +11,7 @@ module.exports = (app, router) => {
 
     router.route('/todos/:id')
         .get(Validate(TodoValidator.getOne()), TodoController.getOne)
-        .put(Validate(TodoValidator.update()), TodoController.update);
+        .put(Validate(TodoValidator.update()), TodoController.update)
+        .delete(Validate(TodoValidator.delete()), TodoController.delete);
 
 };
