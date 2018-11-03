@@ -1,0 +1,46 @@
+{
+  "name": "todo-service",
+  "version": "0.0.1",
+  "main": "index.js",
+  "private": false,
+  "engines": {
+    "node": ">=8.10.0",
+    "npm": ">=5.6.0",
+    "yarn": ">=1.5.1"
+  },
+  "scripts": {
+    "start": "nodemon server/build.js",
+    "docker:start": "pm2-docker start server/build.js",
+    "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up"
+  },
+  "dependencies": {
+    "compression": "1.7.3",
+    "cors": "2.8.4",
+    "debug": "^3.1.0",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "4.16.3",
+    "express-validation": "^1.0.2",
+    "express-winston": "2.6.0",
+    "helmet": "3.13.0",
+    "http-status": "1.2.0",
+    "i18n": "^0.8.3",
+    "joi": "^14.0.4",
+    "jsonwebtoken": "8.3.0",
+    "lodash": "^4.17.11",
+    "method-override": "^3.0.0",
+    "mongoose": "5.2.7",
+    "request": "^2.87.0",
+    "swagger-jsdoc": "^3.2.3",
+    "uuid": "^3.1.0",
+    "winston": "^3.0.0-rc5",
+    "winston-daily-rotate-file": "3.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "*",
+    "babel-preset-stage-2": "^6.24.1",
+    "mocha": "5.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
