@@ -1,6 +1,4 @@
 # Todo service
-## Demo
-http://45.32.221.233:5555/swagger/view
 
 ## Features
 
